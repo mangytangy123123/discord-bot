@@ -1,4 +1,6 @@
 from discord import File
+from blackjack import bjGame
+from bj_bet import get_bet, add_money
 
 
 keywords = ["*help",
@@ -37,18 +39,13 @@ async def parse_message(msg,client):
 
     #blackjack
     if content == keywords[3] or content == keywords[4]:
-         pass
+          bet = await get_bet(author=author,channel=channel, client=client)
+          newgame = bjGame(channel=channel,author=author,client=client,bet_amnt=bet)
+          await add_money(await newgame.STARTGAME(),author,channel)
     
     if content == keywords[5]:
          await send_message(f"bot is now offline",channel)
 
     if content == keywords[6]:
-         with open('discorddeckpng/2_diamonds.png','rb') as fh:
-              f = File(fh,filename='discorddeckpng/2_diamonds.png')
-              await channel.send(file=f)
-    
-
-            
-
-
+          pass
 

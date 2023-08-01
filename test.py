@@ -1,3 +1,11 @@
-k = ['f','d','h','g']
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
 
-print(k.pop(0))
+x = '34'
+
+print(x.isdigit())
+
+
