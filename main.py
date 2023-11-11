@@ -13,4 +13,4 @@ async def on_ready():
 async def on_message(msg):
     await parse_message(msg,client)
 
-client.run('NzM5MjM5MzA5MzA3MjgxNDI5.GOmpqe.hwLsg4blu5YTavyS7t6w2wZeK5GNHjxHxbFH70')
+client.run('')
